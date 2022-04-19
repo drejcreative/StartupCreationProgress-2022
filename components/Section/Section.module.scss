@@ -1,0 +1,33 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-size: 1.4rem;
+    }
+    .icon {
+      color: var(--secoundary);
+    }
+  }
+
+  .sectionList {
+    margin-top: 20px;
+    margin-left: 20px;
+    .checkboxWrap {
+      display: flex;
+      margin: 10px 0px;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .buttonWrap {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+}

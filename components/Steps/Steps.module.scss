@@ -1,0 +1,36 @@
+.steps {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px 1fr 30px;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.step {
+  span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--border);
+    color: var(--lightText);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &.active {
+      background: var(--main);
+    }
+  }
+  &.disabled {
+    span {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.border {
+  border-top: 2px solid var(--border);
+  transform: translateY(50%);
+  &.active {
+    border-top: 2px solid var(--main);
+  }
+}
