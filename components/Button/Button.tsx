@@ -3,6 +3,23 @@ import { Loader } from "../Loader/Loader";
 
 import style from "./Button.module.scss";
 
+interface Props {
+  text: string;
+  onClick?: () => void;
+  primary?: boolean;
+  secoundary?: boolean;
+  terniary?: boolean;
+  error?: boolean;
+  thin?: boolean;
+  small?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
+  fullsize?: boolean;
+  className?: string;
+  icon?: React.ReactNode;
+  inlineStyle?: React.CSSProperties;
+}
+
 const Button = ({
   text,
   primary,
@@ -17,7 +34,7 @@ const Button = ({
   onClick,
   icon,
   className,
-}) => {
+}: Props) => {
   return (
     <button
       className={` ${style.button} ${primary ? style.primary : ""} ${

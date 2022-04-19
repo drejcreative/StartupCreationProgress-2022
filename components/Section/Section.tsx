@@ -1,10 +1,11 @@
 import { HiBadgeCheck } from "react-icons/hi";
 
 import { OneSection, OneSectionItems } from "interfaces";
-import useValidation from "../../hooks/useValidation";
-import { setStorage } from "../../utils/storage";
-import Button from "../Button/Button";
-import Checkbox from "../Checkbox/Checkbox";
+import useValidation from "@/hooks/useValidation";
+import { setStorage } from "@/utils/storage";
+import Button from "@/components/Button/Button";
+import Checkbox from "@/components/Checkbox/Checkbox";
+
 import classes from "./Section.module.scss";
 
 interface Props {
@@ -60,7 +61,7 @@ const Section = ({ data, checked, step, setChecked, setStep }: Props) => {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setCurrentSection(e, item.id)
               }
-              value={checked.filter((one) => one.id === item.id).length}
+              value={!!checked.filter((one) => one.id === item.id).length}
             />
             <span>{item.name}</span>
           </div>

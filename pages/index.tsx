@@ -1,15 +1,15 @@
 import { OneSectionItems } from "interfaces";
 import { useEffect, useState } from "react";
 
-import Complete from "../components/Complete/Complete";
-import DisplayLayout from "../components/DisplayLayout/DisplayLayout";
-import { Loader, LoaderWrap } from "../components/Loader/Loader";
-import Section from "../components/Section/Section";
-import Step from "../components/Steps/Step";
-import Steps from "../components/Steps/Steps";
-import useSection from "../hooks/useSection";
-import useValidation from "../hooks/useValidation";
-import { getStorage } from "../utils/storage";
+import Complete from "@/components/Complete/Complete";
+import DisplayLayout from "@/components/DisplayLayout/DisplayLayout";
+import { Loader, LoaderWrap } from "@/components/Loader/Loader";
+import Section from "@/components/Section/Section";
+import Step from "@/components/Steps/Step";
+import Steps from "@/components/Steps/Steps";
+import useSection from "@/hooks/useSection";
+import useValidation from "@/hooks/useValidation";
+import { getStorage } from "@/utils/storage";
 
 const Home = () => {
   const [step, setStep] = useState(1);

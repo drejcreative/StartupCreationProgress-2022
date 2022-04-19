@@ -1,4 +1,4 @@
-# STARTUP CREATION
+# STARTUP CREATION CHECKLIST
 
 ![Project Screenshot](Startup.png)
 

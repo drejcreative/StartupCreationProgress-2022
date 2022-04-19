@@ -2,14 +2,23 @@ import React, { useState, useEffect } from "react";
 
 import style from "./Checkbox.module.scss";
 
-const Checkbox = ({ onChange, value, name, className }) => {
-  const [checked, setChecked] = useState("");
+interface Props {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label?: string;
+  value: boolean;
+  link?: boolean;
+  className?: string;
+  name?: string;
+}
+
+const Checkbox = ({ onChange, value, name, className }: Props) => {
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     setChecked(value);
   }, [value]);
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
     onChange(e);
   };

@@ -1,4 +1,5 @@
 import React from "react";
+
 import classes from "./DisplayLayout.module.scss";
 
 const DisplayLayout = ({ children }: { children: React.ReactNode }) => (
